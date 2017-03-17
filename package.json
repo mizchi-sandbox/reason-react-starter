@@ -1,0 +1,29 @@
+{
+  "name": "reason-react-starter",
+  "version": "0.0.0",
+  "description": "Minimum react-reason spa boilerplate",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn build && && run-p 'watch:*'",
+    "build": "yarn build:bs && yarn build:js",
+    "build:js": "webpack",
+    "build:bs": "bsb -make-world",
+    "watch:js": "webpack -w",
+    "watch:bs": "bsb -make-world -w",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": [],
+  "author": "mizchi",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "reason-js": "^0.0.16",
+    "reason-react": "https://github.com/reasonml/reason-react.git"
+  },
+  "devDependencies": {
+    "bs-platform": "^1.5.2",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^2.2.1"
+  }
+}
